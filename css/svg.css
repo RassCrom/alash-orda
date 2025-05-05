@@ -1,0 +1,51 @@
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 1000;
+}
+  
+#kazakh-map svg g path {
+    transition: all 0.3s ease;
+}
+  
+#kazakh-map svg g.city-hover path {
+    fill: #c9972f !important;
+    transform: scale(1.2);
+    transform-origin: center;
+}
+  
+#kazakh-map svg g[transform] {
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    100% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+}
+  
+#kazakh-map svg g[transform] path {
+    animation: pulse 3s infinite ease-in-out;
+    animation-delay: calc(var(--delay, 0) * 0.5s);
+}
+  
+#kazakh-map svg g:nth-child(1) path {
+    cursor: default;
+    animation: none;
+}

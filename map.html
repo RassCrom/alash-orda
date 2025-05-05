@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive map showing the historical territories of Alash Orda in Kazakhstan">
+    <title>Alash Orda - Historical Territory Map</title>
+    
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <link rel="stylesheet" href="./css/map.css">
+</head>
+<body>
+     <!-- navigation -->
+    <header id="site-header">
+        <nav>
+            <a href="./index.html" aria-label="Learn about Alash Orda">ALASH ORDA</a>
+            <a href="./map.html" aria-label="View interactive map">INTERACTIVE MAP</a>
+            <a href="./story.html" aria-label="Learn about the leaders">LEADERS</a>
+        </nav>
+    </header>
+
+    <!-- hero -->
+    <section class="hero">
+        <div class="blob blob-1"></div>
+        <div class="hero-content" id="main-content">
+            <h1 class="hero-title">
+                <span class="gradient-text-red">ALASH</span> 
+                <span class="gradient-text-orange">ORDA</span>
+                <span class="gradient-text-yellow">TERRITORIES</span>
+            </h1>
+            <p class="hero-text">Explore the historical boundaries and significant locations of the Alash Orda movement (1917-1920)</p>
+        </div>
+    </section>
+
+    <!-- map intro -->
+    <section class="section" id="map-section">
+        <h2 class="section-title">HISTORICAL GEOGRAPHY</h2>
+        
+        <div class="intro-text">
+            <p>The Alash Orda movement emerged across the vast Kazakh steppe, spanning territories that today form modern Kazakhstan and parts of neighboring countries. This interactive map highlights the key regions under Alash influence, important cities where the movement found support, and historical sites significant to the Kazakh national awakening of the early 20th century.</p>
+            <p>Click on markers and regions to learn more about the historical significance of each location during the brief but impactful existence of the Alash Autonomy.</p>
+        </div>
+
+        <!-- map-->
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+
+        <!-- legend -->
+        <div class="map-legend">
+            <h3 class="legend-title">Legend</h3>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: rgba(255, 51, 0, 0.3); border: 2px solid #ff3300;"></div>
+                    <div class="legend-label">Core Alash Territory</div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: rgba(255, 153, 0, 0.3); border: 2px solid #ff9900;"></div>
+                    <div class="legend-label">Areas of Significant Influence</div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: rgba(255, 204, 0, 0.3); border: 2px solid #ffcc00;"></div>
+                    <div class="legend-label">Contested Regions</div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: rgba(255, 0, 230, 0.3); border: 2px solid #9F2B68;"></div>
+                    <div class="legend-label">Other Regions</div>
+                </div>
+                <div class="legend-item">
+                    <!-- <div class="legend-color" style="background-color: #121212; border: 2px solid #ffffff;"></div> -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <circle cx="12" cy="12" r="3" />
+                      </svg>
+                    <div class="legend-label">Major Cities</div>
+                </div>
+                <div class="legend-item">
+                    <!-- <div class="legend-color" style="background-color: #121212; border: 2px solid #ff3300;"></div> -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff3300" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg>
+                    <div class="legend-label">Administrative Centers</div>
+                </div>
+                <div class="legend-item">
+                    <!-- <div class="legend-color" style="background-color: #121212; border: 2px solid #ffcc00;"></div> -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffcc00" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <div class="legend-label">Key Historical Sites</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- historical context -->
+    <section class="section info-section">
+        <div class="blob blob-2"></div>
+        <h2 class="section-title">HISTORICAL CONTEXT</h2>
+        
+        <div class="info-container">
+            <div class="info-card">
+                <h3 class="info-title">The Kazakh Steppe Under Imperial Rule</h3>
+                <p class="info-text">Prior to the Russian Revolution, the Kazakh territories were divided into several administrative regions within the Russian Empire. The colonial policies of the late 19th and early 20th centuries led to massive land confiscation and Russian settlement, pushing Kazakh nomads into less fertile lands and creating tensions that would fuel the nationalist movement.</p>
+                <p class="info-text">The 1916 Central Asian Revolt, sparked by the conscription of Muslims into labor battalions during World War I, further highlighted the grievances of the Kazakh people and set the stage for the emergence of Alash Orda.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3 class="info-title">The Declaration of Autonomy</h3>
+                <p class="info-text">In December 1917, following the Bolshevik seizure of power, the Second All-Kazakh Congress met in Orenburg and declared the creation of the Alash Autonomy. The territory claimed by the new government encompassed most of what is now Kazakhstan, with tentative boundaries based on the predominance of Kazakh population.</p>
+                <p class="info-text">The autonomy was divided into two administrative regions: Western Alash (headquartered in Oral) and Eastern Alash (based in Semey). However, the turbulent conditions of the Russian Civil War made establishing clear borders and effective administration extremely difficult.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3 class="info-title">The End of Alash Autonomy</h3>
+                <p class="info-text">By 1919-1920, the Bolshevik Red Army had gained the upper hand in the Civil War. The Alash government, which had initially aligned with anti-Bolshevik forces, negotiated with the Soviets to preserve some measure of autonomy. In March 1920, the Alash Autonomy was officially abolished and replaced by the Kyrgyz (later Kazakh) Autonomous Soviet Socialist Republic.</p>
+                <p class="info-text">Despite its short existence, the territorial claims and administrative structures established by Alash Orda formed the blueprint for what would eventually become the borders of independent Kazakhstan.</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn">Return to Home</a>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">© 2025 Alash Orda Historical Project | An educational resource dedicated to preserving the memory of Kazakhstan's early independence movement</p>
+            
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="./map.html">Interactive Map</a>
+                <a href="./story.html">Leaders</a>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="./data/countries4.js"></script>
+    <script src="./js/map.js"></script>
+</body>
+</html>

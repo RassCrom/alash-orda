@@ -1,0 +1,338 @@
+.scroll-down {
+    position: absolute;
+    bottom: 50px;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-down:hover,
+.scroll-down:focus {
+    opacity: 1;
+}
+
+.scroll-down p {
+    margin-bottom: 8px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* content */
+.year-title {
+    text-align: center;
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 50px;
+    letter-spacing: 4px;
+    position: relative;
+}
+
+.year-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-red), var(--accent-orange), var(--accent-yellow));
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.content-text {
+    padding: 20px;
+    text-align: right;
+}
+
+.content-text p {
+    margin-bottom: 20px;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+.content-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+}
+
+.content-image img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* leaders */
+.leaders-section {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 80px 0;
+}
+
+.leaders-title {
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+.leaders-image {
+    margin: 40px auto 0;
+    text-align: center;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.leaders-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.leaders-caption {
+    margin-top: 20px;
+    font-style: italic;
+    opacity: 0.8;
+    text-align: center;
+}
+
+/* intro map */
+.map-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.map-title {
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 30px;
+}
+
+.map-container {
+    position: relative;
+    height: 400px;
+    background-image: url('../imgs/map-bg.webp');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.map-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.map-container > * {
+    position: relative;
+    z-index: 2;
+}
+
+.map-placeholder {
+    font-style: italic;
+    text-align: center;
+}
+
+/* svg map */
+svg g {
+    fill: #fff;
+    fill-opacity: 0.9;
+}
+
+svg g:nth-child(1) {
+    fill: #ffcc00;
+    fill-opacity: 0.4;
+    stroke: #ffcc00;
+    stroke-width: 5;
+}
+
+svg .svg-city:hover {
+    fill: #ffcc00;
+    fill-opacity: 0.6;
+    stroke: #ffcc00;
+    stroke-width: 5;
+}
+
+.svg-map-section {
+    padding: 80px 0;
+    background-color: rgba(18, 18, 18, 0.8);
+    position: relative;
+}
+
+.svg-map-title {
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.svg-map-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.interactive-map {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.svg-map-caption {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    opacity: 0.8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    margin-top: 20px;
+    color: #666;
+}
+
+.map-legend {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 15px;
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    z-index: 10;
+    max-width: 200px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.legend-text {
+    font-size: 0.9rem;
+}
+
+/* SVG styles */
+.region {
+    fill: #121212;
+    stroke: rgba(255, 255, 255, 0.2);
+    stroke-width: 1;
+    transition: all 0.3s ease;
+}
+
+.core-region {
+    fill: var(--accent-orange);
+    opacity: 0.6;
+}
+
+.contested-region {
+    fill: var(--accent-yellow);
+    opacity: 0.4;
+}
+
+.influence-region {
+    fill: var(--accent-red);
+    opacity: 0.3;
+}
+
+.region:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.region-tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    pointer-events: none;
+    z-index: 100;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    max-width: 250px;
+    transition: opacity 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .interactive-map {
+        height: 350px;
+    }
+    
+    .map-legend {
+        position: relative;
+        margin: 20px auto 0;
+        right: auto;
+        bottom: auto;
+        max-width: 280px;
+    }
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .content-text {
+        text-align: left;
+        order: 2;
+    }
+
+    .content-image {
+        order: 1;
+    }
+}

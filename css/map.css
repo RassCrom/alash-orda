@@ -1,0 +1,124 @@
+/* map */
+.map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#map {
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* legend */
+.map-legend {
+    background-color: rgba(18, 18, 18, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.legend-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--accent-orange);
+    padding-bottom: 10px;
+}
+
+.legend-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.legend-label {
+    font-size: 1rem;
+}
+
+/* info */
+.info-section {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 80px 0;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.info-card {
+    background-color: rgba(18, 18, 18, 0.7);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid var(--accent-orange);
+}
+
+.info-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--accent-yellow);
+}
+
+.info-text {
+    margin-bottom: 15px;
+}
+
+/* custom leaflet */
+.leaflet-popup-content-wrapper {
+    background-color: rgba(18, 18, 18, 0.9);
+    color: var(--text-color);
+    border-radius: 8px;
+}
+
+.leaflet-popup-tip {
+    background-color: rgba(18, 18, 18, 0.9);
+}
+
+.popup-title {
+    color: var(--accent-yellow);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--accent-orange);
+    padding-bottom: 5px;
+}
+
+.popup-text {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+    #map {
+        height: 400px;
+    }
+
+    .legend-items {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
